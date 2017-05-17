@@ -1,0 +1,101 @@
+
+
+<html>
+
+
+<head>
+
+	<title>wall</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.1/jquery.mobile-1.2.1.min.css" />
+	<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.2.1/jquery.mobile-1.2.1.min.js"></script>
+
+  <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase-messaging.js"></script>
+
+
+  <!-- Leave out Storage -->
+  <!-- <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase-storage.js"></script> -->
+
+
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyCdPDnwxkZAxJ09nHmkOJzFmRDWpvNbNEo",
+      authDomain: "schoolconnect-9e4ba.firebaseapp.com",
+      databaseURL: "https://schoolconnect-9e4ba.firebaseio.com",
+      projectId: "schoolconnect-9e4ba",
+      storageBucket: "schoolconnect-9e4ba.appspot.com",
+      messagingSenderId: "1085483509763"
+    };
+    firebase.initializeApp(config);
+
+  </script>
+
+<script>
+
+window.onload = function() {
+
+  var juser=localStorage.getItem("user");
+  var user = JSON.parse(juser);
+  console.log(juser);
+  console.log(user);
+
+
+  document.getElementById("hi").innerText = "hello " + user.email;
+
+};
+
+</script>
+
+</head>
+
+
+
+
+<body>
+
+
+
+<div data-role="page">
+
+
+<div data-role="header">
+
+  <div data-role="navbar">
+    <ul>
+      <li><a href="#" data-role="button" data-icon="star">Profile</a></li>
+      <li><a href="#" data-role="button" data-icon="star">Box</a></li>
+    </ul>
+
+
+<div data-role="content" style="background-color:4099FF;">
+
+
+<h1 id="hi">hello </h1>
+
+
+
+
+</div>
+
+<div data-role="footer" data-id="foo1" data-position="fixed">
+<div data-role="navbar">
+  <ul>
+    <li><a href="a.html">post</a></li>
+    <li><a href="b.html">sondage</a></li>
+    <li><a href="c.html">alert</a></li>
+  </ul>
+</div><!-- /navbar -->
+</div><!-- /footer
+
+
+
+</div>
+</body>
+
+</html>
